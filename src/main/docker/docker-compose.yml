@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  app:
+    image: 'backend:latest'
+    build:
+      context: .
+    container_name: app
+    depends_on:
+      - db
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: db
+    environment:
+      POSTGRES_DB: "shop"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "5432:5432"

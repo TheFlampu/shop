@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/shop
+    username: postgres
+    password: root
+
+  main:
+    allow-circular-references: true
+
+  mail:
+    host: smtp.yandex.ru
+    port: 465
+    username: secret@secret.secret
+    password: secret
+    protocol: smtps
+
+jwt:
+  secret: secret
+  lifetime: 30m
+
+upload:
+  path: /D:/IdeaProjects/upload/
